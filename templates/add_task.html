@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block content %}
+<h2>Add New Task</h2>
+<div class="card p-4">
+  <form method="POST">
+    <div class="mb-3">
+      <label>Task Content</label>
+      <input type="text" name="content" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label>Deadline</label>
+      <input type="date" name="deadline" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-success">Save Task</button>
+    <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>
+{% endblock %}
